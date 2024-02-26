@@ -1,0 +1,245 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+  overflow: hidden;
+}
+
+
+#root{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("/public/img/background.jpg");
+  background-position: center center;
+  background-position-x:right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-clip: border-box;
+  opacity: 0.9;
+  
+  h1{
+    align-self: flex-start;
+    justify-items: flex-start;
+    color: aliceblue;
+  }
+}
+
+.search-bar{
+  padding : 5vw 10px 10px 10px;
+  height: 4vw;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  /* border: 2px solid white; */
+
+  input{
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    font-size: 1.2vw;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: rgba(245, 245, 245, 0.904);
+    color: rgb(17, 39, 72);
+  }
+
+  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2vw;
+    height: 1vw;
+    position: absolute;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.1s;
+
+    img{
+      width: 1vw;
+      height: 1vw;
+    }
+  }
+
+  button:active{
+    margin-top: 1px;
+    background-color: #5db52d6e;
+    border-radius: 8px;
+  }
+
+}
+
+.city-data-container{
+  margin-top: 2vw;
+  width: 100%;
+  height: auto;
+  background-color: rgba(121, 255, 192, 0.2);
+  border-radius: 4px;
+  padding-left: 3vw;  
+}
+
+.city-data-container
+.city-info {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.current-fore-container{
+  background-color: rgba(121, 255, 192, 0.2);
+
+  margin-top: 3vw;
+  width: 100%;
+  height: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2,50%);
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px;
+
+  .current-weather{
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(2,auto);
+    gap: 2vw;
+    justify-content: end;
+
+    img{
+      
+      scale:1.8;
+    }
+    
+    div:nth-child(1){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1:nth-child(1){
+        font-size: 6vw !important;
+        color: rebeccapurple ;
+      }
+
+      h1:nth-child(2){
+        font-size: 1.5vw ;
+        font-weight: 100 !important;
+        letter-spacing: 2px;
+      }
+      
+    }
+  }
+
+  .current-info{
+    padding: 10px;
+    display: grid;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(73, 208, 58, 0.4);
+    border-radius: 8px;
+    border: 2px solid rgb(111, 157, 137);
+    -webkit-box-shadow: 3px -4px 43px -4px rgba(0,0,0,0.75);
+   -moz-box-shadow: 3px -4px 43px -4px rgba(0,0,0,0.75);
+   box-shadow: 3px -4px 43px -4px rgba(0,0,0,0.75);
+    gap: 2vw;
+
+    div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 10vw;
+      height: 5vw;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: 0.2s ease-in;
+      color: rgb(255, 255, 255);
+
+      h4{
+        font-size: 1.4vw;
+      }
+
+      p{
+        font-size: 1vw;
+        color: rgba(0, 0, 0, 0.85);
+      }
+    }
+
+    div:hover{
+      border-color: white;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+  }
+}
+
+
+.visually-hidden{
+  display: none !important;
+}
+
+
+.forecast-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 15vw;
+}
+.forecast-container .header{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  font-size: 1.5vw;
+  padding-left: 3vw; 
+}
+.forecast-container .cards{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2vw;
+  padding: 10px 10px 10px 3vw; 
+
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 10vw;
+  height: 10vw;
+  border: 2px solid white;
+  color: aliceblue;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  background-color: rgba(110, 167, 161, 0.4);
+  cursor: pointer;
+
+  div{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+ 
+}
